@@ -1,0 +1,532 @@
+/* ==========================
+   DARK MODE THEME
+   ========================== */
+:root {
+  --bg-dark: #121212;
+  --bg-light-dark: #1e1e1e;
+  --text-light: #eaeaea;
+  --text-muted: #bbbbbb;
+  --accent: #00adb5; /* teal/cyan accent */
+  --btn-hover: #019aa1;
+}
+
+/* ==========================
+   GLOBAL STYLES
+   ========================== */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: var(--bg-dark);
+  color: var(--text-light);
+  line-height: 1.6;
+}
+
+h1, h2, h3 {
+  margin: 0 0 0.5rem 0;
+}
+
+p {
+  margin-bottom: 1rem;
+}
+
+/* ==========================
+   HEADER (Sticky, Logo Left, Bigger Nav)
+   ========================== */
+header {
+  background: var(--bg-light-dark);
+  padding: 1.5rem 2rem; /* taller header */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 2px solid var(--accent);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo {
+  height: 100px;
+  width: auto;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 1.5rem;
+  color: var(--accent);
+}
+
+nav a {
+  margin: 0 15px;           /* more space between links */
+  color: var(--text-muted);
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.2rem;        /* larger font size */
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: var(--accent);
+}
+
+/* ==========================
+   HERO SECTION
+   ========================== */
+.hero {
+  text-align: center;
+  padding: 3rem 2rem;
+  margin: 1rem 2rem;
+}
+
+.hero h2 {
+  font-size: 2rem;
+  color: var(--accent);
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.1rem;
+  color: var(--text-light);
+}
+
+/* ==========================
+   ABOUT / PREVIEW / SUCCESS STORIES
+   ========================== */
+.about-preview, .success-stories, .about, .preview, .courses-highlight {
+  margin: 2rem;
+  text-align: center;
+}
+
+.about-preview h2, .success-stories h2, .about h2 {
+  font-size: 2rem;
+  color: var(--accent);
+  margin-bottom: 1.5rem;
+  text-align: center;
+  border-bottom: 2px solid var(--accent);
+  padding-bottom: 0.5rem;
+}
+
+/* ==========================
+   COURSES OVERVIEW (INDEX PAGE)
+   ========================== */
+.courses-overview {
+  margin: 2rem;
+
+  /* Center all children */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.courses-overview h2 {
+  color: var(--accent);
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  width: 100%;
+  display: block;
+}
+
+.courses-overview p {
+  max-width: 800px;    /* optional: keep text readable */
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.course-overview-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  justify-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.overview-card {
+  background: var(--bg-light-dark);
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+}
+
+.overview-card h3 {
+  color: var(--accent);
+  margin-bottom: 0.5rem;
+}
+
+.discount-info {
+  font-size: 1.1rem;
+  margin-top: 1rem;
+  color: var(--text-light);
+}
+
+/* ==========================
+   SUCCESS STORIES CARDS
+   ========================== */
+.success-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  justify-items: center;
+}
+
+.success-cards article {
+  background: var(--bg-light-dark);
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+}
+
+/* ==========================
+   COURSES CONTAINER & COURSE CARDS (COURSES PAGE)
+   ========================== */
+.courses-container {
+  margin: 2rem;
+  text-align: center;
+}
+
+.courses-container h2 {
+  font-size: 2rem;
+  color: var(--accent);
+  margin-bottom: 2rem;
+}
+
+.course-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem; /* spacing between cards */
+  justify-items: center;
+}
+
+.course-card {
+  background: var(--bg-light-dark);
+  padding: 1.8rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+.course-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.7);
+}
+
+.course-card h3 {
+  color: var(--accent);
+  margin-bottom: 0.5rem;
+}
+
+/* ==========================
+   CALL TO ACTION (CTA)
+   ========================== */
+.cta {
+  text-align: center;
+  margin: 2rem;
+  padding: 2rem 0;
+}
+
+.cta h2 {
+  color: var(--accent);
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+/* ==========================
+   BUTTONS
+   ========================== */
+.btn {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 12px 24px;
+  background: var(--accent);
+  color: var(--bg-dark);
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: background 0.3s ease;
+}
+
+.btn:hover {
+  background: var(--btn-hover);
+  color: var(--bg-dark);
+}
+
+/* ==========================
+   FEE CALCULATOR (COURSES PAGE)
+   ========================== */
+.fee-calculator {
+  background: var(--bg-light-dark);
+  padding: 2rem 2rem;
+  margin: 2rem auto;
+  border-radius: 10px;
+  max-width: 700px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+  text-align: center;
+}
+
+.fee-calculator h2, .fee-calculator h3 {
+  color: var(--accent);
+  margin-bottom: 1rem;
+}
+
+.fee-calculator p {
+  margin-bottom: 0.5rem;  /* reduced spacing */
+}
+
+.fee-calculator label {
+  display: block;
+  margin: 0.5rem 0 0.2rem 0;
+  text-align: left;
+}
+
+.fee-calculator input[type="text"],
+.fee-calculator input[type="email"],
+.fee-calculator select {
+  width: 100%;
+  padding: 10px 12px;
+  margin-bottom: 0.8rem;  /* tighter spacing */
+  border-radius: 6px;
+  border: 1px solid #666; /* softer border */
+  background: var(--bg-dark);
+  color: var(--text-light);
+}
+
+.fee-calculator fieldset {
+  border: 1px solid #666;  /* softer border */
+  padding: 0.8rem;          /* less padding */
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  text-align: left;
+}
+
+.fee-calculator legend {
+  font-weight: bold;
+  color: var(--accent);
+}
+
+.fee-calculator button.btn {
+  display: block;
+  width: 50%;
+  margin: 1rem auto 0 auto;
+  text-align: center;
+}
+
+#totalFee {
+  margin-top: 0.8rem;       /* reduced spacing */
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: var(--text-light);
+}
+
+/* ==========================
+   CONTACT PAGE
+   ========================== */
+.contact-page {
+  background: var(--bg-dark);
+  padding: 2rem;
+  max-width: 900px;
+  margin: 2rem auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+  color: var(--text-light);
+}
+
+.contact-page h2, .contact-page h3 {
+  color: var(--accent);
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.contact-page p {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+/* Form styling */
+.contact-page form {
+  background: var(--bg-light-dark);
+  padding: 1.5rem 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+  margin-bottom: 2rem;
+}
+
+.contact-page label {
+  display: block;
+  margin: 0.5rem 0 0.2rem 0;
+  text-align: left;
+}
+
+.contact-page input[type="text"],
+.contact-page input[type="email"],
+.contact-page textarea {
+  width: 100%;
+  padding: 10px 12px;
+  margin-bottom: 1rem;
+  border-radius: 6px;
+  border: 1px solid #666;
+  background: var(--bg-dark);
+  color: var(--text-light);
+}
+
+.contact-page textarea {
+  resize: vertical;
+}
+
+/* Button */
+.contact-page button.btn {
+  display: block;
+  width: 50%;
+  margin: 1rem auto 0 auto;
+  text-align: center;
+}
+
+/* Contact Info & Extra Info */
+.contact-page .contact-info,
+.contact-page .extra-info,
+.contact-page .venue-selection {
+  background: var(--bg-light-dark);
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.contact-page .venue-selection select {
+  width: 60%;
+  padding: 8px 12px;
+  border-radius: 6px;
+  border: 1px solid #666;
+  background: var(--bg-dark);
+  color: var(--text-light);
+  margin-top: 0.5rem;
+}
+
+/* ==========================
+   SUCCESS MESSAGE / NOTIFICATION
+   ========================== */
+.success-notification {
+  display: none; /* hidden by default */
+  background: var(--bg-light-dark); /* match card style */
+  color: var(--accent);
+  font-weight: bold;
+  text-align: center;
+  padding: 1rem 1.5rem;
+  margin: 1rem auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+  max-width: 500px; /* keeps it centered and not too wide */
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.success-notification.show {
+  display: block;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+/* Map */
+.contact-page #venueMap {
+  margin-top: 1rem;
+  border-radius: 6px;
+}
+
+/* Links */
+.contact-page a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.contact-page a:hover {
+  color: var(--btn-hover);
+  text-decoration: underline;
+}
+
+/* ==========================
+   QUOTE PAGE STYLING
+   ========================== */
+.quote-page {
+  margin: 2rem;
+  text-align: center;
+}
+
+.quote-page h2 {
+  color: var(--accent);
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  border-bottom: 2px solid var(--accent);
+  padding-bottom: 0.5rem;
+}
+
+.quote-page form {
+  display: inline-block;
+  text-align: left;
+  max-width: 500px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.quote-page label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: var(--text-light);
+}
+
+.quote-page input[type="text"],
+.quote-page input[type="email"],
+.quote-page textarea {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 1rem;
+  border-radius: 5px;
+  border: none;
+  background: var(--bg-light-dark);
+  color: var(--text-light);
+}
+
+.quote-page fieldset {
+  border: 1px solid var(--accent);
+  border-radius: 8px;
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+  color: var(--text-light);
+}
+
+.quote-page legend {
+  font-weight: bold;
+  color: var(--accent);
+}
+
+.quote-page .quote-result {
+  margin-top: 1rem;
+  padding: 1rem;
+  background: var(--bg-light-dark);
+  border-radius: 8px;
+  color: var(--accent);
+  font-weight: bold;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+}
+
+
+/* ==========================
+   FOOTER
+   ========================== */
+footer {
+  background: var(--bg-light-dark);
+  color: var(--text-muted);
+  text-align: center;
+  padding: 0.8rem;
+  margin-top: 2rem;
+  border-top: 2px solid var(--accent);
+}

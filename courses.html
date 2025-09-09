@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Empowering the Nation - Courses</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <!-- ==========================
+       HEADER
+       ========================== -->
+  <header>
+    <div class="header-left">
+      <img src="../images/logo.jpg" alt="Empowering the Nation Logo" class="logo">
+      <h1>Empowering the Nation</h1>
+    </div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About Us</a>
+      <a href="courses.html">Courses</a>
+      <a href="quote.html">Get a Quote</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <!-- ==========================
+       HERO SECTION
+       ========================== -->
+  <section class="hero">
+    <h2>Our Courses</h2>
+    <p>Choose from our six-month learnerships or six-week short courses. The more courses you select, the greater your discount!</p>
+  </section>
+
+  <!-- ==========================
+       SIX-MONTH LEARNERSHIPS
+       ========================== -->
+  <section class="courses-container">
+    <h2>Six-Month Learnerships</h2>
+    <div class="course-cards">
+      <article class="course-card">
+        <h3>First Aid</h3>
+        <p><strong>Fees:</strong> R1500</p>
+        <p><strong>Purpose:</strong> Provide first aid awareness and basic life support.</p>
+        <p><strong>Content:</strong> Wounds and bleeding, Burns and fractures, CPR, Emergency management</p>
+      </article>
+
+      <article class="course-card">
+        <h3>Sewing</h3>
+        <p><strong>Fees:</strong> R1500</p>
+        <p><strong>Purpose:</strong> Garment alterations & tailoring services.</p>
+        <p><strong>Content:</strong> Types of stitches, Threading, Sewing buttons/zips, Designing garments</p>
+      </article>
+
+      <article class="course-card">
+        <h3>Landscaping</h3>
+        <p><strong>Fees:</strong> R1500</p>
+        <p><strong>Purpose:</strong> Landscaping for gardens.</p>
+        <p><strong>Content:</strong> Indigenous/exotic plants, Garden layout, Plant balance & aesthetics, Fixed structures</p>
+      </article>
+
+      <article class="course-card">
+        <h3>Life Skills</h3>
+        <p><strong>Fees:</strong> R1500</p>
+        <p><strong>Purpose:</strong> Basic life necessities.</p>
+        <p><strong>Content:</strong> Banking, labor rights, literacy, numeracy</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- ==========================
+       SIX-WEEK SHORT COURSES
+       ========================== -->
+  <section class="courses-container">
+    <h2>Six-Week Short Courses</h2>
+    <div class="course-cards">
+      <article class="course-card">
+        <h3>Child Minding</h3>
+        <p><strong>Fees:</strong> R750</p>
+        <p><strong>Purpose:</strong> Basic child and baby care skills.</p>
+        <p><strong>Content:</strong> Birth–6 months, 7–12 months, Toddler care, Educational toys</p>
+      </article>
+
+      <article class="course-card">
+        <h3>Cooking</h3>
+        <p><strong>Fees:</strong> R750</p>
+        <p><strong>Purpose:</strong> Prepare and cook nutritious family meals.</p>
+        <p><strong>Content:</strong> Nutrition basics, Proteins/carbs/vegetables, Meal planning, Recipes</p>
+      </article>
+
+      <article class="course-card">
+        <h3>Garden Maintenance</h3>
+        <p><strong>Fees:</strong> R750</p>
+        <p><strong>Purpose:</strong> Basic garden care knowledge.</p>
+        <p><strong>Content:</strong> Watering requirements, Pruning & propagation, Planting techniques</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="fee-calculator">
+  <h2>Calculate Total Fees</h2>
+  <p>Select the courses you want to register for and calculate your total including discount and VAT.</p>
+  
+  <form id="feeForm">
+    <!-- Course Selection -->
+    <fieldset>
+      <legend>Select Courses:</legend>
+      <label>
+        <input type="checkbox" name="course" value="First Aid" data-fee="1500">
+        First Aid (R1500)
+      </label>
+      <label>
+        <input type="checkbox" name="course" value="Sewing" data-fee="1500">
+        Sewing (R1500)
+      </label>
+      <label>
+        <input type="checkbox" name="course" value="Landscaping" data-fee="1500">
+        Landscaping (R1500)
+      </label>
+      <label>
+        <input type="checkbox" name="course" value="Life Skills" data-fee="1500">
+        Life Skills (R1500)
+      </label>
+      <label>
+        <input type="checkbox" name="course" value="Child Minding" data-fee="750">
+        Child Minding (R750)
+      </label>
+      <label>
+        <input type="checkbox" name="course" value="Cooking" data-fee="750">
+        Cooking (R750)
+      </label>
+      <label>
+        <input type="checkbox" name="course" value="Garden Maintenance" data-fee="750">
+        Garden Maintenance (R750)
+      </label>
+    </fieldset>
+    
+    <button type="button" id="calculateBtn" class="btn">Calculate Total</button>
+  </form>
+  
+  <!-- Display Total Fee -->
+  <div id="totalFee" style="margin-top:1rem; font-weight:bold;"></div>
+</section>
+
+
+
+  <!-- ==========================
+       DISCOUNT INFO (FULL WIDTH)
+       ========================== -->
+  <section class="cta">
+    <h2>Course Discounts</h2>
+    <p>
+      <strong>One course:</strong> No discount<br>
+      <strong>Two courses:</strong> 5% discount<br>
+      <strong>Three courses:</strong> 10% discount<br>
+      <strong>More than three courses:</strong> 15% discount
+    </p>
+  </section>
+
+  
+
+  <!-- ==========================
+       FOOTER
+       ========================== -->
+  <footer>
+    <p>&copy; 2025 Empowering the Nation. All Rights Reserved.</p>
+  </footer>
+
+<script src="../js/script.js"></script>
+</body>
+</html>

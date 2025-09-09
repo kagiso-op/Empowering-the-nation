@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Request a Quote - Empowering the Nation</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<header>
+  <div class="header-left">
+    <img src="../images/logo.jpg" alt="Empowering the Nation Logo" class="logo">
+    <h1>Empowering the Nation</h1>
+  </div>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="courses.html">Courses</a>
+    <a href="contact.html">Contact</a>
+    <a href="quote.html">Request Quote</a>
+  </nav>
+</header>
+
+<main>
+  <section class="quote-page">
+    <h2>Request a Quote</h2>
+    <p>Select the courses you are interested in, enter your details, and calculate your estimated total fee.</p>
+
+    <form id="quoteForm">
+      <!-- Contact Info -->
+      <label for="name">Full Name:</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="email">Email Address:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="phone">Phone Number:</label>
+      <input type="text" id="phone" name="phone" required>
+
+      <!-- Course Selection -->
+      <fieldset>
+        <legend>Six-Month Learnerships (R1500 each)</legend>
+        <label><input type="checkbox" name="course" value="First Aid" data-fee="1500"> First Aid</label>
+        <label><input type="checkbox" name="course" value="Sewing" data-fee="1500"> Sewing</label>
+        <label><input type="checkbox" name="course" value="Landscaping" data-fee="1500"> Landscaping</label>
+        <label><input type="checkbox" name="course" value="Life Skills" data-fee="1500"> Life Skills</label>
+      </fieldset>
+
+      <fieldset>
+        <legend>Six-Week Short Courses (R750 each)</legend>
+        <label><input type="checkbox" name="course" value="Child Minding" data-fee="750"> Child Minding</label>
+        <label><input type="checkbox" name="course" value="Cooking" data-fee="750"> Cooking</label>
+        <label><input type="checkbox" name="course" value="Garden Maintenance" data-fee="750"> Garden Maintenance</label>
+      </fieldset>
+
+      <!-- Calculate Button -->
+      <button type="button" id="calculateBtn" class="btn">Calculate Total</button>
+    </form>
+
+    <!-- Display Quote -->
+    <div id="totalFee" class="quote-result"></div>
+  </section>
+</main>
+
+<footer>
+  &copy; 2025 Empowering the Nation. All rights reserved.
+</footer>
+
+<script src="../js/script.js"></script>
+</body>
+</html>
